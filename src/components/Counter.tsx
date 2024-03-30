@@ -10,9 +10,9 @@ const Counter = ({initial}: CounterPropsInterface) => {
 
     return (
         <div className={styles.container}>
-            <button className={styles.bg} onClick={() => setValue(value - 1)}>-</button>
+            <button className={styles.button} onClick={() => setValue(value - 1)} type='button'>-</button>
             <div>{value}</div>
-            <button onClick={() => setValue(value + 1)}>+</button>
+            <button className={styles.button} onClick={() => setValue(value + 1)} type='button'>+</button>
         </div>
     );
 };
