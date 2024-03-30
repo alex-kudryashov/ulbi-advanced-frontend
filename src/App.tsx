@@ -1,25 +1,19 @@
-import Counter from "./components/Counter";
 import RouterComponent from "./components/RouterComponent";
 import {Link} from "react-router-dom";
 import './styles/index.scss'
 import useTheme from "./Theme/useTheme";
+import {classNames} from "./helpers/classNames";
 
 const App = () => {
     const {theme, toggleTheme} = useTheme()
 
     return (
-        <div className={`app ${theme}`}>
+        <div className={classNames('app', {}, [theme])}>
             <Link to={'/'}>Go Home</Link>
             <Link to={'/about'}>Go About</Link>
             <button onClick={toggleTheme}>Change Theme</button>
 
             <RouterComponent />
-
-            <div>
-                <h1>Hello!</h1>
-                <p>It's App component!</p>
-            </div>
-            <Counter initial={1} />
         </div>
     );
 };
