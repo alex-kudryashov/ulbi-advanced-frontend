@@ -1,6 +1,6 @@
 @import "reset";
-@import "variables";
-@import "themes";
+@import "variables/index";
+@import "themes/index";
 
 .app {
   font: var(--font);

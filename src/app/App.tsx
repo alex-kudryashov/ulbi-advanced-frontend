@@ -1,8 +1,11 @@
-import RouterComponent from "./components/RouterComponent";
 import {Link} from "react-router-dom";
+
+import {classNames} from "shared/lib";
+import {useTheme} from "app/providers/ThemeProvider";
+
+import RouterComponent from "./components/RouterComponent";
+
 import './styles/index.scss'
-import useTheme from "./Theme/useTheme";
-import {classNames} from "./helpers/classNames";
 
 const App = () => {
     const {theme, toggleTheme} = useTheme()
