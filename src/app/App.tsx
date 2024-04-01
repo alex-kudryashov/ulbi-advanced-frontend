@@ -3,9 +3,9 @@ import {Link} from "react-router-dom";
 import { AppRouter } from "app/providers/RouterProvider";
 import { classNames } from "shared/lib";
 import { useTheme } from "app/providers/ThemeProvider";
+import { RoutePaths } from "shared/config/routeConfig";
 
 import './styles/index.scss'
-import {RoutePaths} from "shared/config/routeConfig/routeConfig";
 
 const App = () => {
     const {theme, toggleTheme} = useTheme()

@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react';
 import {Route, Routes} from "react-router-dom";
-import SuspenseFallback from "../../../components/SuspenseFallback";
-import {routeConfig} from "shared/config/routeConfig/routeConfig";
+import SuspenseFallback from "app/components/SuspenseFallback";
+import { routeConfig } from "shared/config/routeConfig";
 
 export const AppRouter = () => {
     return (
