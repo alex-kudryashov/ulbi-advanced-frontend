@@ -1,0 +1,14 @@
+.AppHeader {
+  background-color: var(--header-background-color);
+  padding: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  .Navbar {
+    margin-left: auto;
+
+    --app-link-default-color: var(--gray-1);
+  }
+}

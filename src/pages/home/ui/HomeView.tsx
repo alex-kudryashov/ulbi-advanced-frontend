@@ -1,7 +1,9 @@
+import {UIKitList} from "widgets/UIKitList";
+
 const HomeView = () => {
     return (
         <div>
-            <h1>Home</h1>
+            <UIKitList />
         </div>
     );
 };

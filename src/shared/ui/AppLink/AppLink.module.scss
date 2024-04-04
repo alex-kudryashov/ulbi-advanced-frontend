@@ -1,8 +1,12 @@
 .AppLink {
-  color: var(--secondary);
+  color: var(--app-link-default-color);
   text-decoration: none;
 
+  &.primary {
+    color: var(--app-link-primary-color);
+  }
+
   &.danger {
-    color: red
+    color: var(--app-link-danger-color);
   }
 }
