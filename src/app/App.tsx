@@ -4,6 +4,7 @@ import { useTheme } from "app/providers/ThemeProvider";
 
 import './styles/index.scss'
 import {AppHeader} from "widgets/AppHeader";
+import {Sidebar} from "widgets/Sidebar";
 
 const App = () => {
     const {theme} = useTheme()
@@ -12,7 +13,13 @@ const App = () => {
         <div className={classNames('app', {}, [theme])}>
             <AppHeader />
 
-            <AppRouter />
+            <div className={'app-content'}>
+                <Sidebar />
+
+                <div className={'page-wrapper'}>
+                    <AppRouter />
+                </div>
+            </div>
         </div>
     );
 };

@@ -1,6 +1,11 @@
 .Button {
   cursor: pointer;
 
+  &.Primary {
+    padding: 2px 16px;
+    background-color: var(--light-0);
+    border-radius: 4px;
+  }
 }
 
 .Clear {

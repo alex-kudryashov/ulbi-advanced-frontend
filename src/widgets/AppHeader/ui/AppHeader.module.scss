@@ -1,10 +1,11 @@
 .AppHeader {
   background-color: var(--header-background-color);
-  padding: 16px;
 
   display: flex;
   align-items: center;
   gap: 32px;
+  height: var(--header-height);
+  padding: 0 32px;
 
   .Navbar {
     margin-left: auto;
