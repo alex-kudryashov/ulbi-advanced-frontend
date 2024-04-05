@@ -3,6 +3,8 @@ import {classNames} from "shared/lib";
 import cls from './Navbar.module.scss'
 import {RoutePaths} from "shared/config/routeConfig";
 import {AppLink} from "shared/ui/AppLink";
+import {useTranslation} from "react-i18next";
+import {Suspense} from "react";
 
 interface NavbarProps {
     className?: string
@@ -14,28 +16,32 @@ interface NavbarListItem {
 }
 
 export const Navbar = ({className}: NavbarProps) => {
+    const {t} = useTranslation()
+
     const NavbarList: NavbarListItem[] = [
         {
             path: RoutePaths.home,
-            label: 'Home'
+            label: t('Главная')
         },
         {
             path: RoutePaths.about,
-            label: 'About'
+            label: t('О нас')
         },
     ]
 
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
-            {NavbarList.map(item => (
-                <AppLink
-                    key={item.path}
-                    to={item.path}
-                    className={cls.Item}
-                >
-                    {item.label}
-                </AppLink>
-            ))}
+            <Suspense fallback={'sdfsfdsdf'}>
+                {NavbarList.map(item => (
+                    <AppLink
+                        key={item.path}
+                        to={item.path}
+                        className={cls.Item}
+                    >
+                            {item.label}
+                    </AppLink>
+                ))}
+            </Suspense>
         </div>
     );
 };

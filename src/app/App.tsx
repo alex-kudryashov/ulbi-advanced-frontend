@@ -5,21 +5,24 @@ import { useTheme } from "app/providers/ThemeProvider";
 import './styles/index.scss'
 import {AppHeader} from "widgets/AppHeader";
 import {Sidebar} from "widgets/Sidebar";
+import {Suspense} from "react";
 
 const App = () => {
     const {theme} = useTheme()
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <AppHeader />
+            <Suspense fallback={''}>
+                <AppHeader />
 
-            <div className={'app-content'}>
-                <Sidebar />
+                <div className={'app-content'}>
+                    <Sidebar />
 
-                <div className={'page-wrapper'}>
-                    <AppRouter />
+                    <div className={'page-wrapper'}>
+                        <AppRouter />
+                    </div>
                 </div>
-            </div>
+            </Suspense>
         </div>
     );
 };
