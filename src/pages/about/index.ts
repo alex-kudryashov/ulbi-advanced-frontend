@@ -1,3 +1,3 @@
 export {
-    AboutViewLazy as AboutView
-} from './ui/AboutView.lazy'
+    AboutViewLazy as AboutView,
+} from './ui/AboutView.lazy';

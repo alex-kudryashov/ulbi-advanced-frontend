@@ -1,7 +1,5 @@
-const SuspenseFallback = () => {
-    return (
-        <div style={{background: 'red'}}>Loading...</div>
-    );
-};
+const SuspenseFallback = () => (
+    <div style={{ background: 'red' }}>Loading...</div>
+);
 
 export default SuspenseFallback;

@@ -1,5 +1,5 @@
-import LucideSunMoon from './LucideSunMoon.svg'
+import LucideSunMoon from './LucideSunMoon.svg';
 
 export {
-    LucideSunMoon
-}
+    LucideSunMoon,
+};

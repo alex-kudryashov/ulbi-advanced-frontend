@@ -1,1 +1,1 @@
-export { routeConfig, AppRoutes, RoutePaths } from './routeConfig'
+export { routeConfig, AppRoutes, RoutePaths } from './routeConfig';

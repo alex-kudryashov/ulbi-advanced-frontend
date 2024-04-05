@@ -1,7 +1,7 @@
-import {classNames} from "shared/lib";
+import { classNames } from 'shared/lib';
 
-import cls from './AppLink.module.scss'
-import {Link, LinkProps} from "react-router-dom";
+import { Link, LinkProps } from 'react-router-dom';
+import cls from './AppLink.module.scss';
 
 export enum AppLinkTypes {
     DEFAULT = 'default',
@@ -19,14 +19,12 @@ export const AppLink = (props: AppLinkProps) => {
         className,
         type = AppLinkTypes.DEFAULT,
         ...otherProps
-    } = props
+    } = props;
 
     return (
         <Link
             className={classNames(cls.AppLink, {}, [className, cls[type]])}
             {...otherProps}
-        >
-
-        </Link>
+        />
     );
 };

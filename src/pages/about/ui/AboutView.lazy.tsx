@@ -1,3 +1,3 @@
-import {lazy} from 'react';
+import { lazy } from 'react';
 
-export const AboutViewLazy = lazy(() => import('./AboutView'))
+export const AboutViewLazy = lazy(() => import('./AboutView'));

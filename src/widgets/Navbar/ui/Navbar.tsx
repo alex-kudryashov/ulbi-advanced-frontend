@@ -1,10 +1,10 @@
-import {classNames} from "shared/lib";
+import { classNames } from 'shared/lib';
 
-import cls from './Navbar.module.scss'
-import {RoutePaths} from "shared/config/routeConfig";
-import {AppLink} from "shared/ui/AppLink";
-import {useTranslation} from "react-i18next";
-import {Suspense} from "react";
+import { RoutePaths } from 'shared/config/routeConfig';
+import { AppLink } from 'shared/ui/AppLink';
+import { useTranslation } from 'react-i18next';
+import { Suspense } from 'react';
+import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string
@@ -15,30 +15,30 @@ interface NavbarListItem {
     label: string
 }
 
-export const Navbar = ({className}: NavbarProps) => {
-    const {t} = useTranslation()
+export const Navbar = ({ className }: NavbarProps) => {
+    const { t } = useTranslation();
 
     const NavbarList: NavbarListItem[] = [
         {
             path: RoutePaths.home,
-            label: t('Главная')
+            label: t('Главная'),
         },
         {
             path: RoutePaths.about,
-            label: t('О нас')
+            label: t('О нас'),
         },
-    ]
+    ];
 
     return (
         <div className={classNames(cls.Navbar, {}, [className])}>
-            <Suspense fallback={'sdfsfdsdf'}>
-                {NavbarList.map(item => (
+            <Suspense fallback="sdfsfdsdf">
+                {NavbarList.map((item) => (
                     <AppLink
                         key={item.path}
                         to={item.path}
                         className={cls.Item}
                     >
-                            {item.label}
+                        {item.label}
                     </AppLink>
                 ))}
             </Suspense>

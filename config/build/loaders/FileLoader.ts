@@ -1,15 +1,12 @@
-import {RuleSetRule} from "webpack";
-import {BuildOptions} from "../types/config";
+import { RuleSetRule } from 'webpack';
 
-const SVGLoader = (options: BuildOptions): RuleSetRule => {
-    return {
-        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-        use: [
-            {
-                loader: 'file-loader',
-            },
-        ],
-    }
-}
+const SVGLoader = (): RuleSetRule => ({
+    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+    use: [
+        {
+            loader: 'file-loader',
+        },
+    ],
+});
 
-export default SVGLoader
+export default SVGLoader;
