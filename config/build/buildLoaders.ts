@@ -4,10 +4,12 @@ import StyleLoader from "./loaders/StyleLoader";
 import {BuildOptions} from "./types/config";
 import SVGLoader from "./loaders/SVGLoader";
 import FileLoader from "./loaders/FileLoader";
+import BabelLoader from "./loaders/BabelLoader";
 
 export default (options: BuildOptions): RuleSetRule[] => [
+    FileLoader(options),
+    SVGLoader(options),
+    BabelLoader(),
     TypeScriptLoader,
     StyleLoader(options),
-    SVGLoader(options),
-    FileLoader(options)
 ]
