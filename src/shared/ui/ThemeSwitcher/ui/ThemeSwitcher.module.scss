@@ -1,13 +1,15 @@
 .ThemeSwitcher {
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
-  --button-background-color: var(--secondary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
 
-  .Icon {
-    fill: var(--primary);
-  }
+    --button-background-color: var(--secondary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Icon {
+        fill: var(--primary);
+    }
 }

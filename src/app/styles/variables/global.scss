@@ -1,17 +1,13 @@
 :root {
-  --font-family-main: 'Trebuchet MS', Helvetica, sans-serif;
-
-  --font-size-s: 12px;
-  --font-size-m: 16px;
-  --font-size-l: 24px;
-
-  --font-line-height-s: 16px;
-  --font-line-height-m: 24px;
-  --font-line-height-l: 32px;
-
-  --font-s: var(--font-size-s)/var(--font-line-height-s);
-  --font-m: var(--font-size-m)/var(--font-line-height-m);
-  --font-l: var(--font-size-l)/var(--font-line-height-l);
-
-  --font: var(--font-m) var(--font-family-main)
+    --font-family-main: "Trebuchet MS", helvetica, sans-serif;
+    --font-size-s: 12px;
+    --font-size-m: 16px;
+    --font-size-l: 24px;
+    --font-line-height-s: 16px;
+    --font-line-height-m: 24px;
+    --font-line-height-l: 32px;
+    --font-s: var(--font-size-s) / var(--font-line-height-s);
+    --font-m: var(--font-size-m) / var(--font-line-height-m);
+    --font-l: var(--font-size-l) / var(--font-line-height-l);
+    --font: var(--font-m) var(--font-family-main);
 }
