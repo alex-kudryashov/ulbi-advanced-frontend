@@ -16,9 +16,7 @@ const App = () => {
                 <AppHeader />
                 <div className="app-content">
                     <Sidebar />
-                    <div className="page-wrapper">
-                        <AppRouter />
-                    </div>
+                    <AppRouter />
                 </div>
             </Suspense>
         </div>

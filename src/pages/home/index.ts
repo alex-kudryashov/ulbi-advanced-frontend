@@ -1,3 +1,3 @@
 export {
-    HomeViewLazy as HomeView,
-} from './ui/HomeView.lazy';
+    HomePageLazy as HomePage,
+} from './ui/HomePage.lazy';

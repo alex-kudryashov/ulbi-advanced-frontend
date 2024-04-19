@@ -1,9 +1,9 @@
 import { UIKitList } from 'widgets/UIKitList';
 
-const HomeView = () => (
+const HomePage = () => (
     <div>
         <UIKitList />
     </div>
 );
 
-export default HomeView;
+export default HomePage;

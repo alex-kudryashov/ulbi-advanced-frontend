@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-const AboutView = () => {
+const AboutPage = () => {
     const { t } = useTranslation('about');
     return (
         <div>
@@ -9,4 +9,4 @@ const AboutView = () => {
     );
 };
 
-export default AboutView;
+export default AboutPage;
