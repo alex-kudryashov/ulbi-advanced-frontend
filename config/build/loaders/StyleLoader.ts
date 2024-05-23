@@ -1,11 +1,8 @@
 import { RuleSetRule } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { BuildOptions } from '../types/config';
 
-const StyleLoader = (options: BuildOptions): RuleSetRule => {
-    const { isDev } = options;
-
-    return {
+const StyleLoader = (isDev: boolean): RuleSetRule => (
+    {
         test: /\.s[ac]ss$/i,
         use: [
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
@@ -20,7 +17,6 @@ const StyleLoader = (options: BuildOptions): RuleSetRule => {
             },
             'sass-loader',
         ],
-    };
-};
+    });
 
 export default StyleLoader;

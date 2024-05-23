@@ -1,4 +1,4 @@
-import React, { ErrorInfo, ReactNode, Suspense } from 'react';
+import React, { ReactNode, Suspense } from 'react';
 import { PageError } from 'widgets/PageError';
 
 interface ErrorBoundaryProps {
@@ -21,9 +21,8 @@ class ErrorBoundary
         return { hasError: true };
     }
 
-    componentDidCatch(error: Error, info: ErrorInfo) {
+    componentDidCatch() {
         // You can also log the error to an error reporting service
-        console.log(error, info);
     }
 
     render() {

@@ -6,5 +6,10 @@
   "Перезагрузить": "Перезагрузить",
   "Что-то пошло не так": "Что-то пошло не так",
   "throw Error": "throw Error",
-  "Toggle": "Toggle"
+  "Toggle": "Toggle",
+  "Загрузка списка меню": "Загрузка списка меню",
+  "Links": "Links",
+  "Default Link": "Default Link",
+  "Primary Link": "Primary Link",
+  "Danger Link": "Danger Link"
 }

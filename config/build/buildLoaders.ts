@@ -11,5 +11,5 @@ export default (options: BuildOptions): RuleSetRule[] => [
     SVGLoader(),
     BabelLoader(),
     TypeScriptLoader,
-    StyleLoader(options),
+    StyleLoader(options.isDev),
 ];
