@@ -8,7 +8,7 @@ import { BuildOptions } from './types/config';
 export default (options: BuildOptions):WebpackPluginInstance[] => {
     const { paths, isDev } = options;
 
-    return [
+    const plugins = [
         new webpack.ProgressPlugin(),
         new HtmlWebpackPlugin({ template: paths.html }),
         new MiniCssExtractPlugin({
@@ -18,9 +18,15 @@ export default (options: BuildOptions):WebpackPluginInstance[] => {
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        isDev && new ReactRefreshPlugin(),
-        new BundleAnalyzerPlugin({
+
+    ];
+
+    if (isDev) {
+        plugins.push(new ReactRefreshPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,
-        }),
-    ].filter(Boolean);
+        }));
+    }
+
+    return plugins.filter(Boolean);
 };
