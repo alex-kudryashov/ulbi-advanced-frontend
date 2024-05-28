@@ -1,9 +1,12 @@
-.app.light {
+.app_light_theme {
     --primary: var(--light-0);
     --secondary: var(--dark-0);
     --header-background-color: var(--dark-0);
     --app-link-default-color: var(--gray-9);
     --app-link-primary-color: var(--blue-9);
     --app-link-danger-color: var(--danger-1);
+    --app-header-link-default-color: var(--gray-1);
     --sidebar-background: var(--dark-0);
+    --button-background-color-primary: var(--light-0);
+    --button-background-color-secondary: var(--dark-5);
 }

@@ -1,37 +1,21 @@
-import { Suspense, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { Suspense } from 'react';
 
 import { AppRouter } from 'app/providers/RouterProvider';
-import { useTheme } from 'app/providers/ThemeProvider';
 import { AppHeader } from 'widgets/AppHeader';
 import { Sidebar } from 'widgets/Sidebar';
-import { Button } from 'shared/ui/Button';
-import { Modal } from 'shared/ui/Modal';
 import { classNames } from 'shared/lib';
 
-const App = () => {
-    const { theme } = useTheme();
-    const { t } = useTranslation();
+const App = () => (
+    <div className={classNames('app', {})}>
+        <Suspense fallback="">
+            <AppHeader />
 
-    const [isOpen, setIsOpen] = useState(false);
-
-    return (
-        <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback="">
-                <AppHeader />
-
-                <Button onClick={() => setIsOpen(true)}>{t('Hello')}</Button>
-                <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
-                    <div>{t('Hello')}</div>
-                </Modal>
-
-                <div className="app-content">
-                    <Sidebar />
-                    <AppRouter />
-                </div>
-            </Suspense>
-        </div>
-    );
-};
+            <div className="app-content">
+                <Sidebar />
+                <AppRouter />
+            </div>
+        </Suspense>
+    </div>
+);
 
 export default App;

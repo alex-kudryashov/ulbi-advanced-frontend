@@ -2,10 +2,13 @@
 @import "variables";
 @import "themes";
 
-.app {
+body {
     background-color: var(--primary);
     font: var(--font);
     color: var(--secondary);
+}
+
+.app {
     min-height: 100vh;
 
     &-content {
