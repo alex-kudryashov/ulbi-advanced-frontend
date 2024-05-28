@@ -27,5 +27,9 @@ export default ({ config }: {config: webpack.Configuration}) => {
     config.module.rules.push(SVGLoader());
     config.module.rules.push(StyleLoader(true));
 
+    config.resolve.alias = {
+        entities: path.resolve(__dirname, '..', '..', 'src', 'entities'),
+    };
+
     return config;
 };
