@@ -12,5 +12,7 @@
   "Default Link": "Default Link",
   "Primary Link": "Primary Link",
   "Danger Link": "Danger Link",
-  "Hello": "Hello"
+  "Hello": "Hello",
+  "decrement": "decrement",
+  "increment": "increment"
 }

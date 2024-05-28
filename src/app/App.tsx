@@ -8,12 +8,13 @@ import { Sidebar } from 'widgets/Sidebar';
 import { Button } from 'shared/ui/Button';
 import { Modal } from 'shared/ui/Modal';
 import { classNames } from 'shared/lib';
+import { Counter } from 'entities/Counter';
 
 const App = () => {
     const { theme } = useTheme();
     const { t } = useTranslation();
 
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className={classNames('app', {}, [theme])}>
@@ -24,6 +25,7 @@ const App = () => {
                 <Modal isOpen={isOpen} onClose={() => setIsOpen(false)}>
                     <div>{t('Hello')}</div>
                 </Modal>
+                <Counter />
 
                 <div className="app-content">
                     <Sidebar />
