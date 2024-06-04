@@ -17,7 +17,8 @@
     "test:ui:ci": "npx loki --requireReference --reactUri file:./storybook-static",
     "storybook": "storybook dev -p 6007 -c ./config/storybook",
     "storybook:build": "storybook build -c ./config/storybook",
-    "json-server:start": "node ./json-server/index.js"
+    "json-server:start": "node ./json-server/index.js",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -81,7 +82,8 @@
     "webpack": "^5.69.1",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.7.4",
+    "husky": "^8.0.0"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.0",

@@ -14,5 +14,8 @@
   "Danger Link": "Danger Link",
   "Hello": "Hello",
   "decrement": "decrement",
-  "increment": "increment"
+  "increment": "increment",
+  "username": "username",
+  "password": "password",
+  "Войти": "Войти"
 }

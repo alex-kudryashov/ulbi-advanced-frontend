@@ -18,6 +18,7 @@ export const OpenModal: Story = {
         children: 'Modal content',
         isOpen: true,
         onClose: () => {},
+        lazy: false,
     },
 };
 
@@ -26,6 +27,27 @@ export const OpenModalDarkTheme: Story = {
         children: 'Modal content',
         isOpen: true,
         onClose: () => {},
+        lazy: false,
+    },
+    decorators: [ThemeDecorator(Theme.Dark)],
+};
+
+export const OpenModalLazy: Story = {
+    args: {
+        children: 'Modal content',
+        isOpen: true,
+        onClose: () => {},
+        lazy: true,
+    },
+    decorators: [ThemeDecorator(Theme.Dark)],
+};
+
+export const ClosedModalLazy: Story = {
+    args: {
+        children: 'Modal content',
+        isOpen: false,
+        onClose: () => {},
+        lazy: true,
     },
     decorators: [ThemeDecorator(Theme.Dark)],
 };
